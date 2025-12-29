@@ -1,0 +1,758 @@
+/* Resetando estilos padrão do navegador para todos os elementos */
+* {
+    /* Removendo margens padrão */
+    margin: 0;
+    /* Removendo preenchimento padrão */
+    padding: 0;
+    /* Definindo modelo de caixa para incluir padding e border no cálculo da largura */
+    box-sizing: border-box;
+}
+
+/* Estilizando o corpo da página */
+body {
+    /* Definindo família de fontes */
+    font-family: 'Arial', sans-serif;
+    /* Definindo cor de fundo branca */
+    background-color: #ffffff;
+    /* Definindo cor do texto */
+    color: #333;
+    /* Adicionando espaço superior para compensar o menu fixo */
+    padding-top: 80px;
+    /* Definindo largura mínima da página */
+    min-width: 320px;
+}
+
+/* Estilizando o menu fixo no topo */
+.menu-fixo {
+    /* Fixando o menu no topo da tela */
+    position: fixed;
+    /* Posicionando no topo (0 pixels do topo) */
+    top: 0;
+    /* Posicionando na esquerda (0 pixels da esquerda) */
+    left: 0;
+    /* Definindo largura total (100% da tela) */
+    width: 100%;
+    /* Definindo altura do menu */
+    height: 70px;
+    /* Definindo cor de fundo azul escuro */
+    background-color: #1e3a8a;
+    /* Adicionando sombra para dar profundidade */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    /* Garantindo que o menu fique acima de outros elementos */
+    z-index: 1000;
+    /* Centralizando conteúdo verticalmente */
+    display: flex;
+    /* Alinhando itens verticalmente no centro */
+    align-items: center;
+    /* Alinhando itens horizontalmente no centro */
+    justify-content: center;
+}
+
+/* Estilizando o container interno do menu */
+.menu-container {
+    /* Definindo largura máxima do container */
+    max-width: 1200px;
+    /* Definindo largura total do container */
+    width: 100%;
+    /* Usando flexbox para organizar elementos */
+    display: flex;
+    /* Alinhando itens verticalmente no centro */
+    align-items: center;
+    /* Distribuindo espaço entre os elementos */
+    justify-content: space-between;
+    /* Adicionando preenchimento horizontal */
+    padding: 0 20px;
+}
+
+/* Estilizando o logo/nome da empresa */
+.logo {
+    /* Usando flexbox para alinhar imagem e texto */
+    display: flex;
+    /* Alinhando itens verticalmente no centro */
+    align-items: center;
+    /* Adicionando gap entre imagem e texto */
+    gap: 12px;
+    /* Removendo decoração de texto (sublinhado) */
+    text-decoration: none;
+    /* Adicionando transição suave para efeitos hover */
+    transition: all 0.3s;
+}
+
+/* Estilizando a imagem do logo */
+.logo-img {
+    /* Definindo altura da imagem do logo */
+    height: 50px;
+    /* Mantendo proporção da imagem */
+    width: auto;
+    /* Removendo filtro para manter cores originais do logo */
+    /* O logo já tem as cores corretas (branco e amarelo) */
+}
+
+/* Efeito hover no logo (quando o mouse passa por cima) */
+.logo:hover {
+    /* Aumentando ligeiramente o tamanho ao passar o mouse */
+    transform: scale(1.05);
+}
+
+/* Estilizando o texto do logo com design personalizado */
+.logo-texto {
+    /* Definindo tamanho da fonte */
+    font-size: 26px;
+    /* Definindo peso da fonte (negrito) */
+    font-weight: 800;
+    /* Adicionando espaçamento entre letras */
+    letter-spacing: 1.5px;
+    /* Adicionando transição suave */
+    transition: all 0.3s;
+    /* Adicionando fundo azul semi-transparente para mesclar com o menu */
+    padding: 6px 14px;
+    /* Adicionando borda arredondada */
+    border-radius: 10px;
+    /* Adicionando fundo azul semi-transparente para homogeneidade com o menu */
+    background: rgba(59, 130, 246, 0.25);
+    /* Adicionando borda sutil para melhor integração */
+    border: 1px solid rgba(96, 165, 250, 0.4);
+    /* Aplicando gradiente de cores no texto (branco para amarelo para azul claro) */
+    background-image: linear-gradient(135deg, #ffffff 0%, #fbbf24 50%, #60a5fa 100%);
+    /* Aplicando gradiente como cor do texto */
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Tornando o texto transparente para mostrar o gradiente */
+    -webkit-text-fill-color: transparent;
+    /* Adicionando sombra de texto sutil para destaque */
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    /* Usando position relative para camadas */
+    position: relative;
+    /* Adicionando overflow hidden para bordas arredondadas */
+    overflow: hidden;
+}
+
+/* Criando camada de fundo azul para o texto do logo */
+.logo-texto::before {
+    /* Criando elemento pseudo para o fundo */
+    content: '';
+    /* Posicionando absolutamente */
+    position: absolute;
+    /* Cobrindo todo o elemento */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Adicionando fundo azul semi-transparente */
+    background: rgba(59, 130, 246, 0.25);
+    /* Adicionando borda arredondada */
+    border-radius: 10px;
+    /* Colocando atrás do texto */
+    z-index: -1;
+}
+
+/* Efeito hover no texto do logo */
+.logo:hover .logo-texto {
+    /* Aumentando brilho ao passar o mouse */
+    filter: brightness(1.3) drop-shadow(0 3px 6px rgba(0, 0, 0, 0.3));
+    /* Aumentando escala */
+    transform: scale(1.08);
+}
+
+/* Estilizando a lista de navegação */
+.nav-menu {
+    /* Removendo estilo de lista padrão */
+    list-style: none;
+    /* Usando flexbox para organizar itens */
+    display: flex;
+    /* Removendo gap entre itens (será adicionado no item) */
+    gap: 0;
+}
+
+/* Estilizando cada item do menu */
+.nav-menu li {
+    /* Adicionando margem à direita para espaçamento */
+    margin-right: 30px;
+}
+
+/* Estilizando os links do menu */
+.nav-menu a {
+    /* Definindo cor do texto branca */
+    color: #ffffff;
+    /* Removendo decoração de texto */
+    text-decoration: none;
+    /* Definindo tamanho da fonte */
+    font-size: 16px;
+    /* Adicionando transição suave */
+    transition: color 0.3s;
+    /* Adicionando preenchimento para área clicável maior */
+    padding: 10px 15px;
+    /* Transformando em elemento de bloco inline */
+    display: inline-block;
+}
+
+/* Efeito hover nos links do menu */
+.nav-menu a:hover {
+    /* Mudando cor para azul claro ao passar o mouse */
+    color: #60f0fa;
+}
+
+/* Estilizando o container principal do conteúdo */
+.container {
+    /* Definindo largura máxima do container */
+    max-width: 1200px;
+    /* Centralizando o container horizontalmente */
+    margin: 0 auto;
+    /* Adicionando preenchimento horizontal */
+    padding: 0 20px;
+}
+
+/* Estilizando seções da página */
+.secao {
+    /* Adicionando preenchimento vertical */
+    padding: 60px 0;
+    /* Adicionando preenchimento horizontal */
+    padding-left: 20px;
+    /* Adicionando preenchimento horizontal */
+    padding-right: 20px;
+}
+
+/* Estilizando títulos de seção */
+.secao h2 {
+    /* Definindo tamanho da fonte */
+    font-size: 32px;
+    /* Definindo cor azul escura */
+    color: #1e3a8a;
+    /* Adicionando margem inferior */
+    margin-bottom: 30px;
+    /* Centralizando o texto */
+    text-align: center;
+}
+
+/* Estilizando parágrafos */
+p {
+    /* Definindo altura da linha para melhor legibilidade */
+    line-height: 1.6;
+    /* Adicionando margem inferior */
+    margin-bottom: 15px;
+    /* Definindo tamanho da fonte */
+    font-size: 16px;
+}
+
+/* Estilizando o banner hero (seção inicial) */
+.banner-hero {
+    /* Definindo posição relativa para posicionar texto sobreposto */
+    position: relative;
+    /* Definindo altura do banner */
+    height: 400px;
+    /* Adicionando margem inferior */
+    margin-bottom: 40px;
+    /* Adicionando borda arredondada */
+    border-radius: 15px;
+    /* Ocultando overflow para manter bordas arredondadas */
+    overflow: hidden;
+    /* Adicionando sombra */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilizando a imagem do banner */
+.banner-img {
+    /* Definindo largura total */
+    width: 100%;
+    /* Definindo altura total */
+    height: 100%;
+    /* Mantendo proporção e cobrindo toda a área */
+    object-fit: cover;
+    /* Adicionando filtro escuro para melhor legibilidade do texto */
+    filter: brightness(0.7);
+}
+
+/* Estilizando o texto sobreposto no banner */
+.banner-texto {
+    /* Posicionando absolutamente sobre a imagem */
+    position: absolute;
+    /* Centralizando verticalmente */
+    top: 50%;
+    /* Centralizando horizontalmente */
+    left: 50%;
+    /* Transformando para centralizar perfeitamente */
+    transform: translate(-50%, -50%);
+    /* Centralizando o texto */
+    text-align: center;
+    /* Definindo cor do texto branca */
+    color: #ffffff;
+    /* Adicionando sombra no texto para melhor legibilidade */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilizando título do banner */
+.banner-texto h1 {
+    /* Definindo tamanho da fonte */
+    font-size: 48px;
+    /* Adicionando margem inferior */
+    margin-bottom: 15px;
+    /* Definindo cor branca */
+    color: #ffffff;
+}
+
+/* Estilizando parágrafo do banner */
+.banner-texto p {
+    /* Definindo tamanho da fonte */
+    font-size: 24px;
+    /* Definindo cor branca */
+    color: #ffffff;
+}
+
+/* Estilizando container da seção sobre nós */
+.sobre-container {
+    /* Usando flexbox para organizar imagem e texto */
+    display: flex;
+    /* Adicionando gap entre elementos */
+    gap: 40px;
+    /* Alinhando itens verticalmente no centro */
+    align-items: center;
+    /* Adicionando margem superior */
+    margin-top: 30px;
+}
+
+/* Estilizando div da imagem sobre nós */
+.sobre-imagem {
+    /* Definindo largura flexível */
+    flex: 1;
+    /* Adicionando borda arredondada */
+    border-radius: 10px;
+    /* Ocultando overflow */
+    overflow: hidden;
+    /* Adicionando sombra */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilizando imagem da seção sobre nós */
+.img-sobre {
+    /* Definindo largura total */
+    width: 100%;
+    /* Definindo altura automática */
+    height: auto;
+    /* Mantendo proporção */
+    object-fit: cover;
+    /* Adicionando transição suave */
+    transition: transform 0.3s;
+}
+
+/* Efeito hover na imagem sobre nós */
+.img-sobre:hover {
+    /* Aumentando escala ao passar o mouse */
+    transform: scale(1.05);
+}
+
+/* Estilizando texto da seção sobre nós */
+.sobre-texto {
+    /* Definindo largura flexível */
+    flex: 1;
+}
+
+/* Estilizando imagens dos produtos */
+.produto-img {
+    /* Definindo largura total */
+    width: 100%;
+    /* Definindo altura fixa */
+    height: 200px;
+    /* Mantendo proporção e cobrindo área */
+    object-fit: cover;
+    /* Adicionando borda arredondada superior */
+    border-radius: 8px 8px 0 0;
+    /* Adicionando margem inferior */
+    margin-bottom: 15px;
+    /* Adicionando transição suave */
+    transition: transform 0.3s;
+}
+
+/* Efeito hover nas imagens dos produtos */
+.produto-img:hover {
+    /* Aumentando escala ao passar o mouse */
+    transform: scale(1.05);
+}
+
+/* Estilizando a seção de ofertas */
+.ofertas {
+    /* Definindo cor de fundo azul claro */
+    background-color: #dbeafe;
+    /* Adicionando preenchimento */
+    padding: 40px 20px;
+    /* Adicionando borda arredondada */
+    border-radius: 10px;
+    /* Adicionando margem superior */
+    margin-top: 20px;
+}
+
+/* Estilizando grid de ofertas */
+.grid-ofertas {
+    /* Usando grid layout para organizar ofertas */
+    display: grid;
+    /* Definindo 3 colunas iguais */
+    grid-template-columns: repeat(3, 1fr);
+    /* Adicionando gap entre os itens */
+    gap: 20px;
+    /* Adicionando margem superior */
+    margin-top: 20px;
+}
+
+/* Estilizando cards de ofertas */
+.card-oferta {
+    /* Definindo cor de fundo branca */
+    background-color: #ffffff;
+    /* Adicionando preenchimento */
+    padding: 20px;
+    /* Adicionando borda arredondada */
+    border-radius: 8px;
+    /* Adicionando sombra sutil */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Adicionando transição suave */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efeito hover nos cards de ofertas */
+.card-oferta:hover {
+    /* Elevando o card ao passar o mouse */
+    transform: translateY(-5px);
+    /* Aumentando a sombra */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilizando títulos dos cards */
+.card-oferta h3 {
+    /* Definindo cor azul */
+    color: #1e3a8a;
+    /* Adicionando margem inferior */
+    margin-bottom: 10px;
+}
+
+/* Estilizando a seção de blogs */
+.blogs {
+    /* Definindo cor de fundo branca */
+    background-color: #ffffff;
+    /* Adicionando preenchimento */
+    padding: 40px 20px;
+}
+
+/* Estilizando grid de blogs */
+.grid-blogs {
+    /* Usando grid layout para organizar blogs */
+    display: grid;
+    /* Definindo 2 colunas iguais */
+    grid-template-columns: repeat(2, 1fr);
+    /* Adicionando gap entre os itens */
+    gap: 30px;
+    /* Adicionando margem superior */
+    margin-top: 30px;
+}
+
+/* Estilizando cards de blog */
+.card-blog {
+    /* Definindo cor de fundo azul muito claro */
+    background-color: #eff6ff;
+    /* Adicionando preenchimento */
+    padding: 25px;
+    /* Adicionando borda arredondada */
+    border-radius: 10px;
+    /* Adicionando borda azul */
+    border: 2px solid #3b82f6;
+    /* Adicionando transição suave */
+    transition: all 0.3s;
+}
+
+/* Efeito hover nos cards de blog */
+.card-blog:hover {
+    /* Mudando cor de fundo ao passar o mouse */
+    background-color: #dbeafe;
+    /* Aumentando a sombra */
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+/* Estilizando títulos dos blogs */
+.card-blog h3 {
+    /* Definindo cor azul escura */
+    color: #1e3a8a;
+    /* Adicionando margem inferior */
+    margin-bottom: 15px;
+    /* Definindo tamanho da fonte */
+    font-size: 22px;
+}
+
+/* Estilizando conteúdo dos blogs */
+.card-blog p {
+    /* Definindo cor do texto */
+    color: #4b5563;
+    /* Adicionando margem inferior */
+    margin-bottom: 10px;
+}
+
+/* Estilizando informações adicionais dos blogs */
+.blog-info {
+    /* Adicionando margem superior */
+    margin-top: 15px;
+    /* Definindo tamanho da fonte menor */
+    font-size: 14px;
+    /* Definindo cor cinza */
+    color: #6b7280;
+    /* Adicionando estilo itálico */
+    font-style: italic;
+}
+
+/* Estilizando contador de cliques */
+.cliques {
+    /* Definindo cor azul */
+    color: #3b82f6;
+    /* Definindo peso da fonte (negrito) */
+    font-weight: bold;
+}
+
+/* Estilizando formulário de contato */
+.form-contato {
+    /* Definindo largura máxima */
+    max-width: 600px;
+    /* Centralizando o formulário */
+    margin: 0 auto;
+    /* Adicionando cor de fundo azul claro */
+    background-color: #dbeafe;
+    /* Adicionando preenchimento */
+    padding: 30px;
+    /* Adicionando borda arredondada */
+    border-radius: 10px;
+}
+
+/* Estilizando grupos de campos do formulário */
+.form-group {
+    /* Adicionando margem inferior */
+    margin-bottom: 20px;
+}
+
+/* Estilizando labels do formulário */
+.form-group label {
+    /* Transformando em elemento de bloco */
+    display: block;
+    /* Adicionando margem inferior */
+    margin-bottom: 5px;
+    /* Definindo cor azul escura */
+    color: #1e3a8a;
+    /* Definindo peso da fonte */
+    font-weight: bold;
+}
+
+/* Estilizando inputs e textareas */
+.form-group input,
+.form-group textarea {
+    /* Definindo largura total */
+    width: 100%;
+    /* Adicionando preenchimento */
+    padding: 12px;
+    /* Adicionando borda */
+    border: 2px solid #3b82f6;
+    /* Adicionando borda arredondada */
+    border-radius: 5px;
+    /* Definindo tamanho da fonte */
+    font-size: 16px;
+    /* Adicionando transição suave */
+    transition: border-color 0.3s;
+}
+
+/* Efeito focus nos inputs */
+.form-group input:focus,
+.form-group textarea:focus {
+    /* Removendo outline padrão */
+    outline: none;
+    /* Mudando cor da borda ao focar */
+    border-color: #1e3a8a;
+}
+
+/* Estilizando botão de envio */
+.btn-enviar {
+    /* Definindo cor de fundo azul */
+    background-color: #3b82f6;
+    /* Definindo cor do texto branca */
+    color: #ffffff;
+    /* Adicionando preenchimento */
+    padding: 12px 30px;
+    /* Removendo borda */
+    border: none;
+    /* Adicionando borda arredondada */
+    border-radius: 5px;
+    /* Definindo tamanho da fonte */
+    font-size: 16px;
+    /* Adicionando cursor pointer */
+    cursor: pointer;
+    /* Adicionando transição suave */
+    transition: background-color 0.3s;
+}
+
+/* Efeito hover no botão */
+.btn-enviar:hover {
+    /* Mudando cor de fundo ao passar o mouse */
+    background-color: #1e3a8a;
+}
+
+/* Estilizando rodapé */
+footer {
+    /* Definindo cor de fundo azul escura */
+    background-color: #1e3a8a;
+    /* Definindo cor do texto branca */
+    color: #ffffff;
+    /* Adicionando preenchimento */
+    padding: 30px 0;
+    /* Centralizando o texto */
+    text-align: center;
+    /* Adicionando margem superior */
+    margin-top: 60px;
+}
+
+/* ========== MEDIA QUERIES PARA RESPONSIVIDADE ========== */
+
+/* Estilos para tablets (largura máxima de 768px) */
+@media (max-width: 768px) {
+    /* Ajustando padding superior do body */
+    body {
+        padding-top: 70px;
+    }
+    
+    /* Ajustando altura do menu */
+    .menu-fixo {
+        height: 60px;
+    }
+    
+    /* Ajustando tamanho do logo */
+    .logo {
+        font-size: 20px;
+    }
+    
+    /* Ajustando tamanho da imagem do logo */
+    .logo-img {
+        height: 45px;
+    }
+    
+    /* Ajustando espaçamento dos itens do menu */
+    .nav-menu li {
+        margin-right: 15px;
+    }
+    
+    /* Ajustando tamanho dos links do menu */
+    .nav-menu a {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+    
+    /* Ajustando altura do banner */
+    .banner-hero {
+        height: 300px;
+    }
+    
+    /* Ajustando tamanho do título do banner */
+    .banner-texto h1 {
+        font-size: 36px;
+    }
+    
+    /* Ajustando tamanho do parágrafo do banner */
+    .banner-texto p {
+        font-size: 18px;
+    }
+    
+    /* Ajustando layout da seção sobre nós para coluna */
+    .sobre-container {
+        flex-direction: column;
+    }
+    
+    /* Ajustando grid de ofertas para 2 colunas */
+    .grid-ofertas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Ajustando grid de blogs para 1 coluna */
+    .grid-blogs {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Ajustando tamanho do título de seção */
+    .secao h2 {
+        font-size: 28px;
+    }
+}
+
+/* Estilos para smartphones (largura máxima de 480px) */
+@media (max-width: 480px) {
+    /* Ajustando padding superior do body */
+    body {
+        padding-top: 60px;
+    }
+    
+    /* Ajustando altura do menu */
+    .menu-fixo {
+        height: 55px;
+    }
+    
+    /* Ajustando tamanho do logo */
+    .logo {
+        font-size: 18px;
+    }
+    
+    /* Ajustando tamanho da imagem do logo */
+    .logo-img {
+        height: 40px;
+    }
+    
+    /* Ajustando espaçamento dos itens do menu */
+    .nav-menu li {
+        margin-right: 10px;
+    }
+    
+    /* Ajustando tamanho dos links do menu */
+    .nav-menu a {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+    
+    /* Ajustando altura do banner */
+    .banner-hero {
+        height: 250px;
+    }
+    
+    /* Ajustando tamanho do título do banner */
+    .banner-texto h1 {
+        font-size: 28px;
+    }
+    
+    /* Ajustando tamanho do parágrafo do banner */
+    .banner-texto p {
+        font-size: 16px;
+    }
+    
+    /* Ajustando layout da seção sobre nós para coluna */
+    .sobre-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    /* Ajustando altura das imagens dos produtos */
+    .produto-img {
+        height: 150px;
+    }
+    
+    /* Ajustando grid de ofertas para 1 coluna */
+    .grid-ofertas {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Ajustando grid de blogs para 1 coluna */
+    .grid-blogs {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Ajustando tamanho do título de seção */
+    .secao h2 {
+        font-size: 24px;
+    }
+    
+    /* Ajustando preenchimento das seções */
+    .secao {
+        padding: 40px 10px;
+    }
+    
+    /* Ajustando preenchimento do formulário */
+    .form-contato {
+        padding: 20px;
+    }
+}
+

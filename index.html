@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<!-- Definindo o idioma do documento como português -->
+<html lang="pt-BR">
+<head>
+    <!-- Definindo conjunto de caracteres UTF-8 para suportar acentos -->
+    <meta charset="UTF-8">
+    <!-- Definindo viewport para responsividade em dispositivos móveis -->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Definindo título da página que aparece na aba do navegador -->
+    <title>TECNOFANJOS - Loja de Tecnologia</title>
+    <!-- Linkando arquivo CSS externo para estilização -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Menu fixo no topo da página -->
+    <nav class="menu-fixo">
+        <!-- Container interno do menu para organização -->
+        <div class="menu-container">
+            <!-- Logo/Nome da empresa com link para o topo -->
+            <a href="#inicio" class="logo">
+                <!-- Imagem do logo da empresa -->
+                <img src="logo.png.jpg" alt="Logo TECNOFANJOS" class="logo-img">
+                <!-- Texto do nome da empresa ao lado da logo (personalizado) -->
+                <span class="logo-texto">TECNOFANJOS</span>
+            </a>
+            <!-- Lista de navegação com links do menu -->
+            <ul class="nav-menu">
+                <!-- Item do menu: Início -->
+                <li><a href="#inicio">Início</a></li>
+                <!-- Item do menu: Sobre Nós -->
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <!-- Item do menu: Ofertas -->
+                <li><a href="#ofertas">Ofertas</a></li>
+                <!-- Item do menu: Blogs -->
+                <li><a href="#blogs">Blogs</a></li>
+                <!-- Item do menu: Contato -->
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Container principal do conteúdo -->
+    <div class="container">
+        <!-- Seção inicial da página -->
+        <section id="inicio" class="secao">
+            <!-- Banner principal com imagem -->
+            <div class="banner-hero">
+                <!-- Imagem de banner da loja (casa com painéis solares e família) -->
+                <img src="banner.jpg" alt="Banner TECNOFANJOS - Tecnologia e Sustentabilidade" class="banner-img">
+                <!-- Texto sobreposto no banner -->
+                <div class="banner-texto">
+                    <!-- Título principal da seção -->
+                    <h1>Bem-vindo à TECNOFANJOS</h1>
+                    <!-- Parágrafo de boas-vindas -->
+                    <p>Sua loja de tecnologia de confiança</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção "Sobre Nós" -->
+        <section id="sobre" class="secao">
+            <!-- Título da seção -->
+            <h2>Sobre Nós!</h2>
+            <!-- Container flexível para imagem e texto -->
+            <div class="sobre-container">
+                <!-- Imagem da empresa -->
+                <div class="sobre-imagem">
+                    <!-- Imagem representativa da loja (técnico profissional trabalhando) -->
+                    <img src="sobre-nos.jpg" alt="Técnico profissional da TECNOFANJOS" class="img-sobre">
+                </div>
+                <!-- Texto sobre a empresa -->
+                <div class="sobre-texto">
+                    <!-- Parágrafo explicativo sobre a empresa -->
+                    <p>A TECNOFANJOS é uma loja especializada em tecnologia, oferecendo os melhores produtos e serviços para atender todas as suas necessidades tecnológicas. Com anos de experiência no mercado, nos destacamos pela qualidade, inovação e compromisso com nossos clientes.</p>
+                    <!-- Parágrafo sobre os valores da empresa -->
+                    <p>Nossa missão é proporcionar acesso à tecnologia de ponta, com preços justos e atendimento personalizado. Trabalhamos com as principais marcas do mercado e oferecemos suporte técnico especializado.</p>
+                    <!-- Parágrafo sobre diferenciais -->
+                    <p>Na TECNOFANJOS, você encontra desde smartphones e notebooks até componentes de última geração, sempre com garantia e assistência técnica de qualidade.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Ofertas -->
+        <section id="ofertas" class="secao">
+            <!-- Título da seção -->
+            <h2>Ofertas</h2>
+            <!-- Container com grid de ofertas -->
+            <div class="ofertas">
+                <!-- Grid para organizar os cards de ofertas -->
+                <div class="grid-ofertas">
+                    <!-- Card de oferta 1: Smartphone -->
+                    <div class="card-oferta">
+                        <!-- Imagem do produto -->
+                        <img src="smartphone.jpg" alt="Smartphone Premium" class="produto-img">
+                        <!-- Título do produto -->
+                        <h3>Smartphone Premium</h3>
+                        <!-- Descrição da oferta -->
+                        <p>Smartphone de última geração com tela AMOLED, câmera tripla e processador de alta performance. Ideal para quem busca tecnologia de ponta.</p>
+                        <!-- Preço destacado -->
+                        <p style="color: #3b82f6; font-weight: bold; font-size: 20px;">R$ 2.499,90</p>
+                    </div>
+                    <!-- Card de oferta 2: Notebook -->
+                    <div class="card-oferta">
+                        <!-- Imagem do produto -->
+                        <img src="notebook.jpg" alt="Notebook Gamer" class="produto-img">
+                        <!-- Título do produto -->
+                        <h3>Notebook Gamer</h3>
+                        <!-- Descrição da oferta -->
+                        <p>Notebook gamer com placa de vídeo dedicada, processador Intel i7 e 16GB de RAM. Perfeito para jogos e trabalho pesado.</p>
+                        <!-- Preço destacado -->
+                        <p style="color: #3b82f6; font-weight: bold; font-size: 20px;">R$ 4.999,90</p>
+                    </div>
+                    <!-- Card de oferta 3: Fones de Ouvido -->
+                    <div class="card-oferta">
+                        <!-- Imagem do produto -->
+                        <img src="fones.jpg" alt="Fones Bluetooth" class="produto-img">
+                        <!-- Título do produto -->
+                        <h3>Fones Bluetooth</h3>
+                        <!-- Descrição da oferta -->
+                        <p>Fones de ouvido sem fio com cancelamento de ruído ativo, bateria de longa duração e som de alta qualidade.</p>
+                        <!-- Preço destacado -->
+                        <p style="color: #3b82f6; font-weight: bold; font-size: 20px;">R$ 399,90</p>
+                    </div>
+                    <!-- Card de oferta 4: Tablet -->
+                    <div class="card-oferta">
+                        <!-- Imagem do produto -->
+                        <img src="tablet.jpg" alt="Tablet Pro" class="produto-img">
+                        <!-- Título do produto -->
+                        <h3>Tablet Pro</h3>
+                        <!-- Descrição da oferta -->
+                        <p>Tablet profissional com tela de alta resolução, caneta stylus incluída e processador potente para produtividade.</p>
+                        <!-- Preço destacado -->
+                        <p style="color: #3b82f6; font-weight: bold; font-size: 20px;">R$ 1.799,90</p>
+                    </div>
+                    <!-- Card de oferta 5: Smartwatch -->
+                    <div class="card-oferta">
+                        <!-- Imagem do produto -->
+                        <img src="smartwatch.jpg" alt="Smartwatch Fitness" class="produto-img">
+                        <!-- Título do produto -->
+                        <h3>Smartwatch Fitness</h3>
+                        <!-- Descrição da oferta -->
+                        <p>Relógio inteligente com monitoramento de saúde, GPS integrado, resistente à água e bateria de 7 dias.</p>
+                        <!-- Preço destacado -->
+                        <p style="color: #3b82f6; font-weight: bold; font-size: 20px;">R$ 599,90</p>
+                    </div>
+                    <!-- Card de oferta 6: Teclado Mecânico -->
+                    <div class="card-oferta">
+                        <!-- Imagem do produto -->
+                        <img src="teclado.jpg" alt="Teclado Mecânico RGB" class="produto-img">
+                        <!-- Título do produto -->
+                        <h3>Teclado Mecânico RGB</h3>
+                        <!-- Descrição da oferta -->
+                        <p>Teclado mecânico com switches personalizáveis, iluminação RGB, construção robusta e design ergonômico.</p>
+                        <!-- Preço destacado -->
+                        <p style="color: #3b82f6; font-weight: bold; font-size: 20px;">R$ 349,90</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Blogs -->
+        <section id="blogs" class="secao blogs">
+            <!-- Título da seção -->
+            <h2>Blogs - Notícias Mais Clicadas</h2>
+            <!-- Grid para organizar os cards de blogs -->
+            <div class="grid-blogs" id="blogs-container">
+                <!-- Card de blog 1: Notícia sobre IA -->
+                <div class="card-blog">
+                    <!-- Título da notícia -->
+                    <h3>Inteligência Artificial: O Futuro da Tecnologia</h3>
+                    <!-- Conteúdo da notícia -->
+                    <p>A inteligência artificial está revolucionando diversos setores, desde saúde até educação. Descubra as últimas tendências e como isso afeta nosso dia a dia.</p>
+                    <!-- Informações adicionais (autor, data, cliques) -->
+                    <div class="blog-info">
+                        <!-- Autor da notícia -->
+                        <p>Por: <span>TECNOFANJOS</span> | Data: <span>15/01/2024</span> | Cliques: <span class="cliques">0</span></p>
+                    </div>
+                </div>
+                <!-- Card de blog 2: Notícia sobre 5G -->
+                <div class="card-blog">
+                    <!-- Título da notícia -->
+                    <h3>5G: A Nova Era da Conectividade</h3>
+                    <!-- Conteúdo da notícia -->
+                    <p>A tecnologia 5G promete velocidades de internet até 100 vezes maiores que o 4G. Saiba como isso vai transformar a forma como nos conectamos.</p>
+                    <!-- Informações adicionais (autor, data, cliques) -->
+                    <div class="blog-info">
+                        <!-- Autor da notícia -->
+                        <p>Por: <span>TECNOFANJOS</span> | Data: <span>12/01/2024</span> | Cliques: <span class="cliques">0</span></p>
+                    </div>
+                </div>
+                <!-- Card de blog 3: Notícia sobre Realidade Virtual -->
+                <div class="card-blog">
+                    <!-- Título da notícia -->
+                    <h3>Realidade Virtual e Aumentada: Além dos Jogos</h3>
+                    <!-- Conteúdo da notícia -->
+                    <p>VR e AR não são apenas para entretenimento. Empresas estão usando essas tecnologias para treinamento, design e muito mais.</p>
+                    <!-- Informações adicionais (autor, data, cliques) -->
+                    <div class="blog-info">
+                        <!-- Autor da notícia -->
+                        <p>Por: <span>TECNOFANJOS</span> | Data: <span>10/01/2024</span> | Cliques: <span class="cliques">0</span></p>
+                    </div>
+                </div>
+                <!-- Card de blog 4: Notícia sobre Segurança Digital -->
+                <div class="card-blog">
+                    <!-- Título da notícia -->
+                    <h3>Segurança Digital: Proteja Seus Dados</h3>
+                    <!-- Conteúdo da notícia -->
+                    <p>Com o aumento de ameaças cibernéticas, é essencial proteger seus dados pessoais. Conheça as melhores práticas de segurança digital.</p>
+                    <!-- Informações adicionais (autor, data, cliques) -->
+                    <div class="blog-info">
+                        <!-- Autor da notícia -->
+                        <p>Por: <span>TECNOFANJOS</span> | Data: <span>08/01/2024</span> | Cliques: <span class="cliques">0</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Contato -->
+        <section id="contato" class="secao">
+            <!-- Título da seção -->
+            <h2>Contato</h2>
+            <!-- Formulário de contato -->
+            <form class="form-contato" id="formContato">
+                <!-- Grupo de campo: Nome -->
+                <div class="form-group">
+                    <!-- Label do campo nome -->
+                    <label for="nome">Nome:</label>
+                    <!-- Input de texto para nome -->
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <!-- Grupo de campo: Email -->
+                <div class="form-group">
+                    <!-- Label do campo email -->
+                    <label for="email">Email:</label>
+                    <!-- Input de email -->
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <!-- Grupo de campo: Telefone -->
+                <div class="form-group">
+                    <!-- Label do campo telefone -->
+                    <label for="telefone">Telefone:</label>
+                    <!-- Input de telefone -->
+                    <input type="tel" id="telefone" name="telefone" required>
+                </div>
+                <!-- Grupo de campo: Mensagem -->
+                <div class="form-group">
+                    <!-- Label do campo mensagem -->
+                    <label for="mensagem">Mensagem:</label>
+                    <!-- Textarea para mensagem -->
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                </div>
+                <!-- Botão de envio do formulário -->
+                <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <!-- Texto de copyright -->
+        <p>&copy; 2025 TECNOFANJOS - Todos os direitos reservados - Feito por Chris Axl</p>
+        <!-- Informações de contato no rodapé -->
+        <p>Email: contato@tecnofanjos.com.br | Telefone: (87) 9 9149-4427</p>
+    </footer>
+
+    <!-- Script JavaScript para funcionalidades interativas -->
+    <script>
+        // Adicionando evento de submit ao formulário de contato
+        document.getElementById('formContato').addEventListener('submit', function(e) {
+            // Prevenindo o comportamento padrão de envio do formulário
+            e.preventDefault();
+            // Exibindo mensagem de sucesso
+            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+            // Limpando os campos do formulário
+            this.reset();
+        });
+
+        // Função para incrementar cliques nos blogs (simulação)
+        // Esta função pode ser integrada com o backend Python
+        document.querySelectorAll('.card-blog').forEach(function(card) {
+            // Adicionando evento de clique em cada card de blog
+            card.addEventListener('click', function() {
+                // Buscando o elemento de cliques dentro do card
+                var cliquesElement = this.querySelector('.cliques');
+                // Incrementando o contador de cliques
+                var cliquesAtuais = parseInt(cliquesElement.textContent) || 0;
+                // Atualizando o contador na tela
+                cliquesElement.textContent = cliquesAtuais + 1;
+            });
+        });
+
+        // Adicionando scroll suave ao clicar nos links do menu
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            // Adicionando evento de clique em cada link âncora
+            anchor.addEventListener('click', function(e) {
+                // Prevenindo comportamento padrão
+                e.preventDefault();
+                // Obtendo o ID da seção alvo
+                var targetId = this.getAttribute('href').substring(1);
+                // Buscando o elemento da seção
+                var targetElement = document.getElementById(targetId);
+                // Se o elemento existir, fazer scroll suave até ele
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

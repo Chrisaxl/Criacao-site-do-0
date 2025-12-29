@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "titulo": "Inteligência Artificial: O Futuro da Tecnologia",
+    "conteudo": "A inteligência artificial está revolucionando diversos setores, desde saúde até educação. Descubra as últimas tendências e como isso afeta nosso dia a dia.",
+    "autor": "TECNOFANJOS",
+    "data": "15/01/2024 10:30",
+    "cliques": 0
+  },
+  {
+    "id": 2,
+    "titulo": "5G: A Nova Era da Conectividade",
+    "conteudo": "A tecnologia 5G promete velocidades de internet até 100 vezes maiores que o 4G. Saiba como isso vai transformar a forma como nos conectamos.",
+    "autor": "TECNOFANJOS",
+    "data": "12/01/2024 14:20",
+    "cliques": 0
+  },
+  {
+    "id": 3,
+    "titulo": "Realidade Virtual e Aumentada: Além dos Jogos",
+    "conteudo": "VR e AR não são apenas para entretenimento. Empresas estão usando essas tecnologias para treinamento, design e muito mais.",
+    "autor": "TECNOFANJOS",
+    "data": "10/01/2024 09:15",
+    "cliques": 0
+  },
+  {
+    "id": 4,
+    "titulo": "Segurança Digital: Proteja Seus Dados",
+    "conteudo": "Com o aumento de ameaças cibernéticas, é essencial proteger seus dados pessoais. Conheça as melhores práticas de segurança digital.",
+    "autor": "TECNOFANJOS",
+    "data": "08/01/2024 16:45",
+    "cliques": 0
+  }
+]
+
